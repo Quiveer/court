@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/home-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap4.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <title>Dashboard</title>
+
+    <style>
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        .listRight {
+            left: auto !important;
+            right: 0 !important;
+        }
+        .home-banner {
+            background: url('img/home-banner.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+    </style>
+
+  </head>
+  <body style="background-color: rgb(88, 88, 88);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="dashboard">SALINE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard"><i class="fa fa-square"></i>&nbsp; Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="archives"><i class="fa fa-list"></i>&nbsp; Archives</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="add-case"><i class="fa fa-pencil"></i>&nbsp; New Case</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mycases"><i class="fa fa-file"></i>&nbsp; My Cases</a>
+                </li>
+                &nbsp;
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu listRight" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">profile</a>
+                      <hr>
+                      <a class="dropdown-item" href="/">Log out</a>
+                    </div>
+                </li>
+            </ul>
+          <!-- </div> -->
+        </div>
+    </nav>
+
+    <!-- container -->
+    <hr>
+    <div class="container-fluid" style="background-color: rgb(241, 234, 234);">
+        <h3 class="display-6" style="text-align:center;">Register New Case</h3>
+                    
+        <form action="/newcase" method="POST">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>Court: </label>
+                        <input type="text" id="courtname name="courtname" class="form-control" placeholder="Court name" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Location: </label>
+                        <input type="text" id="location" name="location" class="form-control" placeholder="Location" required/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>Category: </label>
+                        <select name="category" class="form-control" required>
+                            <option value="">choose...</option>
+                            <option value="">Supreme Court</option>
+                            <option value="">Court of Appeal</option>
+                            <option value="" onclick="highcourt()">High Court</option>
+                            <option value="" onclick="magistrate()">Magistrate Court</option>
+                            <option value="">Court Martial</option>
+                            <option value="">Kadhi's Court</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6" id="highcourt" style="display: none;">
+                        <label>High Court Sub-Category: </label>
+                        <select name="category" class="form-control" >
+                            <option value="">choose...</option>
+                            <option value="">Employment & Labour Relations Court</option>
+                            <option value="">Environment & Land Court</option>
+                            <option value="">Family Division Court</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6" id="magistrate" style="display: none;">
+                        <label>Magistrate Sub-Category: </label>
+                        <select name="category" class="form-control" >
+                            <option value="">choose...</option>
+                            <option value="">Chief Magistrate Court</option>
+                            <option value="">Senior Principal Magistrate Court</option>
+                            <option value="">Principal Magistrate Court</option>
+                            <option value="">Senior Resident Magistrate Court</option>
+                            <option value="">Resident Magistrate Court</option>
+                            <option value="">District Magistrate Court</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>Case Title: </label>
+                        <input type="text" name="caseTitle" class="form-control" placeholder="Case title" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Case. No.: </label>
+                        <input type="text" name="caseNo" class="form-control" placeholder="Case no." required/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>Case Date: </label>
+                        <input type="date" name="date" class="form-control" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Scheduled Time: </label>
+                        <input type="time" name="time" class="form-control" required/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label> Prosecutor </label>
+                        <input type="text" id="code" name="prosecutor" class="form-control" placeholder="Prosecutor" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label> Accused </label>
+                        <input type="text" id="code" name="accused" class="form-control" placeholder="Accused" required/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Proceed to Begin">
+            </div>
+        <br>
+    </form>
+</div>
+
+    <div class="container-fluid grad"  style="color: white;">
+        <div class="row container">
+            <div class="col-lg-4">
+                <i class="fa fa-circle fa-4x"></i> &nbsp;
+                <div class="block">
+                    <h5><b>0 Cases Available</b></h5>
+                    <p>Explore A Variety Of Cases</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <i class="fa fa-check fa-4x"></i> &nbsp;
+                <div class="block">
+                    <h5><b>Expert Guidance</b></h5>
+                    <p>Find The Right Case For You</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <i class="fa fa-clock-o fa-4x"></i> &nbsp;
+                <div class="block">
+                    <h5><b>Lifetime Access</b></h5>
+                    <p>Access any file On Your Schedule</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">SALINE</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="">About us</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="">Contact us</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Log Out</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/bootstrap4.min.js"></script>
+
+    <script>
+        function highcourt() {
+            var x = document.getElementById("highcourt");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function magistrate() {
+            var x = document.getElementById("magistrate");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    
+  </body>
+</html>

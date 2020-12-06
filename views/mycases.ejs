@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="assets/css/home-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap4.min.css">
+    <script src="assets/js/jquery.3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+ 
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <title>My Cases</title>
+
+    <style>
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        .listRight {
+            left: auto !important;
+            right: 0 !important;
+        }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="dashboard">SALINE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard"><i class="fa fa-square"></i>&nbsp; Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="archives"> All Cases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""> Supreme Court</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""> Court of Appeal</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      High Court
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Employment & Labour Relations Court</a>
+                      <a class="dropdown-item" href="#">Environment & Land Court</a>
+                      <a class="dropdown-item" href="#">Family Division Court</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Magistrate Court
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Chief Magistrate Court</a>
+                      <a class="dropdown-item" href="#">Senior Principal Magistrate Court</a>
+                      <a class="dropdown-item" href="#">Principal Magistrate Court</a>
+                      <a class="dropdown-item" href="#">Senior Resident Magistrate Court</a>
+                      <a class="dropdown-item" href="#">Resident Magistrate Court</a>
+                      <a class="dropdown-item" href="#">District Magistrate Court</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""> Court Martial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""> Kadhi's Court</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="mycases"><i class="fa fa-file"></i>&nbsp; My Cases</a>
+                </li>
+                &nbsp;
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu listRight" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">profile</a>
+                      <hr>
+                      <a class="dropdown-item" href="/">Log out</a>
+                    </div>
+                </li>
+            </ul>
+          <!-- </div> -->
+        </div>
+    </nav>
+
+    <h3  style="text-align: center;color: black;">My Cases</h3>
+
+    <!-- Table -->
+    <table id="example" class="display" style="width:100%; background-color: rgb(214, 203, 203);">
+      <thead style="background-color: darkgray;">
+        <tr>
+          <th scope="col">Case. No.</th>
+          <th scope="col">Court</th>
+          <th scope="col">Area</th>
+          <th scope="col">Case Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B12</td>
+          <td>High Court</td>
+          <td>Nyeri</td>
+          <td>Shell Oil Theft</td>
+          <td>Friday 02/02/2020</td>
+          <td>14:00</td>
+          <td><a href="viewcase"><input type="submit" class="btn btn-info" value="View Case"></a></td>
+        </tr>
+        <tr>
+          <td>B13</td>
+          <td>High Court</td>
+          <td>Kiambu</td>
+          <td>Shell Oil Theft</td>
+          <td>Friday 02/02/2020</td>
+          <td>14:00</td>
+          <td><a href="viewcase"><input type="submit" class="btn btn-info" value="View Case"></a></td>
+        </tr>
+        <tr>
+          <td>B14</td>
+          <td>High Court</td>
+          <td>Mombasa</td>
+          <td>Shell Oil Theft</td>
+          <td>Friday 02/02/2020</td>
+          <td>14:00</td>
+          <td><a href="viewcase"><input type="submit" class="btn btn-info" value="View Case"></a></td>
+        </tr>
+        <tr>
+          <td>B15</td>
+          <td>High Court</td>
+          <td>Nyeri</td>
+          <td>Shell Oil Theft</td>
+          <td>Friday 02/02/2020</td>
+          <td>14:00</td>
+          <td><a href="viewcase"><input type="submit" class="btn btn-info" value="View Case"></a></td>
+        </tr>
+        <tr>
+          <td>B16</td>
+          <td>High Court</td>
+          <td>Nyeri</td>
+          <td>Shell Oil Theft</td>
+          <td>Friday 02/02/2020</td>
+          <td>14:00</td>
+          <td><a href="viewcase"><input type="submit" class="btn btn-info" value="View Case"></a></td>
+        </tr>
+      </tbody>
+        <tfoot style="background-color: darkgray;">
+            <tr>
+              <th scope="col">Case. No.</th>
+              <th scope="col">Court</th>
+              <th scope="col">Area</th>
+              <th scope="col">Case Title</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col"></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- footer -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SALINE</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="">About us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="">Contact us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Log Out</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      $(document).ready(function() {
+          $('#example').DataTable( {
+              scrollY:        '80vh',
+              scrollCollapse: true,
+              paging:         false
+          } );
+      } );
+    </script>
+
+  </body>
+</html>
