@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Sign Up</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+	  <div id="login-page">
+	  	<div class="container">
+
+
+		      <form class="form-login" action="/signup" method="post">
+		        <h2 class="form-login-heading">Sign Up now</h2>
+                 
+		        <div class="login-wrap">
+		            <select name="title" class="form-control" required>
+                  <option value="">Title</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Mrs">Mrs</option>
+                </select>
+                <br>
+                <input type="text" name="fname" class="form-control" placeholder="First name" required>
+                <br>
+                <input type="text" name="sname" class="form-control" placeholder="Second name" required>
+                <br>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                <br>
+                <input type="number" name="phone" class="form-control" placeholder="Phone number" required>
+                <br>
+                <label>Mode of payment</label>
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <label for="mpesa">
+                          <input type="radio" name="payment" id="mpesa" value="M-Pesa" required> M-Pesa
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></a>
+                        </label>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p style="color: rgb(9, 204, 9);">BUSINESS NO.: 734567</p>
+                        <p style="color: green;">ACCOUNT NO.: phone number</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <label for="visa">
+                          <input type="radio" name="payment" id="visa" value="Visa" required> Visa
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"></a>
+                        </label>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p style="color: rgb(9, 204, 9);">BUSINESS NO.: 734567</p>
+                        <p style="color: green;">ACCOUNT NO.: phone number</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                <br>
+                <input class="btn btn-theme btn-block" type="submit" value="Sign Up">
+                <br>
+                <span>Already have an account? <a href="login">Login</a>.</span>
+
+            </div>
+          </form>
+
+	  	</div>
+	  </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+    </script>
+    <script>
+      $('#mpesa').on('click', function() {
+        $(this).parent().find('a').trigger('click')
+      })
+      $('#visa').on('click', function() {
+        $(this).parent().find('a').trigger('click')
+      })
+    </script>
+
+  </body>
+</html>

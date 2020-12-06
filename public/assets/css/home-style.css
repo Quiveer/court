@@ -1,0 +1,45 @@
+.container {
+    border-radius: 5px;
+}
+
+.home-banner .content {
+    color: white;
+    width: 35%;
+    transform: translate(-400px, 0);
+}
+
+.grad {
+    background-image: linear-gradient(to right, rgb(29, 10, 136) , rgb(128, 208, 223));
+    /* padding-left: 150px; */
+}
+
+.col-lg-4, .flex {
+    display: inline-flex;
+}
+
+.block{
+    display: inline-block;
+}
+
+.footer {
+    background-color: rgb(32, 216, 42);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.add-course {
+    float: right;
+    color: rgb(16, 218, 16);
+    border-radius: 20px; 
+    background-color: transparent; 
+    border-color: rgb(16, 218, 16);
+}
+.add-course:hover {
+    color: rgb(18, 252, 30);
+}
+.nav-link {
+    color: black;
+}
+.nav-link:hover {
+    color: green;
+}
